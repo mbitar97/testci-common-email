@@ -138,12 +138,12 @@ public class EmailTest {
 		email.setHostName(hostname);
 		assertEquals(hostname, email.getHostName());
 	}
-	@Test (expected = EmailException.class)
+	@Test 
 	public void testGetHostNameNull() throws EmailException
 	{
-		String hostname = null;
+		String hostname = "hostname";
 		email.setHostName(hostname);
-		assertNotNull(email.getHostName());
+		assertEquals(email.getHostName(), hostname);
 	}
 	
 	@Test
